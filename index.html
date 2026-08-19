@@ -1,282 +1,513 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ИИ Агент — Больше контроля, меньше рутины</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>АгентИИ — команда разработки ИИ-агентов для корпораций</title>
+<meta name="description" content="Проектируем и внедряем ИИ-агентов для закупок (44-ФЗ / 223-ФЗ), комплаенса, маркетинга и корпоративного управления. Развёртывание в вашем контуре, данные остаются в РФ.">
+<meta name="theme-color" content="#0B1020">
+<link rel="canonical" href="https://агентии.рф/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="АгентИИ">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://агентии.рф/">
+<meta property="og:title" content="АгентИИ — команда разработки ИИ-агентов для корпораций">
+<meta property="og:description" content="ИИ-агенты для закупок, комплаенса, маркетинга и корпоративного управления. От диагностики процесса до внедрения в вашем контуре.">
+<meta property="og:image" content="https://агентии.рф/og.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230B1020'/%3E%3Cpath d='M20 44 L32 20 L44 44' stroke='%234C6FFF' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M25 36 h14' stroke='%234C6FFF' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "АгентИИ",
+  "url": "https://агентии.рф/",
+  "description": "Команда разработки ИИ-агентов для корпоративных процессов: закупки, комплаенс, маркетинг, корпоративное управление.",
+  "email": "gladdd@list.ru",
+  "areaServed": "RU"
+}
+</script>
 </head>
 <body>
-    <nav class="main-nav jasper-navbar">
-        <div class="container nav-flex jasper-navbar-container">
-            <a href="#hero" class="logo jasper-logo">АгентИИ.рф</a>
-            <ul class="nav-menu jasper-nav-list">
-                <li><a href="#how" class="jasper-nav-link">Как работает</a></li>
-                <li><a href="#benefits" class="jasper-nav-link">Преимущества</a></li>
-                <li><a href="#solutions" class="jasper-nav-link">Для кого</a></li>
-                <li><a href="#compliance" class="jasper-nav-link">Безопасность</a></li>
-                <li><a href="#faq" class="jasper-nav-link">FAQ</a></li>
-                <li><a href="#pilot" class="jasper-nav-link">Пилот</a></li>
-                <li><a href="#team" class="jasper-nav-link">Команда</a></li>
-            </ul>
-            <!-- <a href="#cta" class="jasper-btn nav-cta jasper-navbar-cta">Запросить демо</a> -->
-        </div>
+
+<a class="skip-link" href="#main">Перейти к содержанию</a>
+
+<header class="site-header" id="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="АгентИИ — на главную">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" width="30" height="30"><rect width="64" height="64" rx="16" fill="currentColor"/><path d="M20 44 L32 20 L44 44" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M25 36 h14" stroke="#fff" stroke-width="6" stroke-linecap="round"/></svg>
+      </span>
+      <span class="brand-text">Агент<span class="brand-accent">ИИ</span></span>
+    </a>
+
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <a href="#directions">Направления</a>
+      <a href="#process">Как мы работаем</a>
+      <a href="#tech">Технологии</a>
+      <a href="#team">Команда</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#contact" class="btn btn-primary btn-sm nav-cta">Обсудить задачу</a>
     </nav>
+  </div>
+</header>
 
-    <!-- Hero Section -->
-    <header class="hero jasper-hero" id="hero">
-        <div class="container">
-            <div class="hero-content jasper-hero-content">
-                <h1 class="hero-title jasper-title">Больше контроля, меньше рутины</h1>
-                <p class="hero-subtitle jasper-subtitle">ИИ-агент для автоматизации закупок по 44-ФЗ и 223-ФЗ.</p>
-                <a href="#cta" class="jasper-btn hero-cta jasper-navbar-cta big-selling-cta" id="open-cta">Запросить демо</a>
-            </div>
-            <div class="hero-bg-animation jasper-bg"></div>
+<main id="main">
+
+  <!-- ======================= HERO ======================= -->
+  <section class="hero" id="top">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <p class="eyebrow"><span class="dot"></span> Команда разработки ИИ-агентов</p>
+      <h1 class="h1">Мы строим ИИ-агентов,<br>которые доводят корпоративные&nbsp;процессы до&nbsp;результата</h1>
+      <p class="lede">Не чат-бот и не демо. Агент, который сам проходит регламент от начала до конца — находит, проверяет, оформляет, контролирует сроки — и оставляет за человеком решение.</p>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary btn-lg">Обсудить задачу</a>
+        <a href="#directions" class="btn btn-ghost btn-lg">Что мы делаем</a>
+      </div>
+
+      <ul class="hero-chips">
+        <li>Закупки 44-ФЗ / 223-ФЗ</li>
+        <li>Комплаенс</li>
+        <li>Маркетинг</li>
+        <li>Корпоративное управление</li>
+      </ul>
+
+      <dl class="hero-facts">
+        <div><dt>В вашем контуре</dt><dd>On-premise или частное облако, данные не покидают периметр</dd></div>
+        <div><dt>Человек решает</dt><dd>Агент готовит и обосновывает, подпись и решение — за вами</dd></div>
+        <div><dt>Прозрачный стек</dt><dd>Open-source, открытый API, полный лог действий агента</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ======================= PROBLEM ======================= -->
+  <section class="section section-tight" id="problem">
+    <div class="wrap">
+      <div class="split">
+        <div class="split-left">
+          <p class="kicker">Проблема</p>
+          <h2 class="h2">Регламентная работа съедает людей, которых не хватает</h2>
         </div>
-        <div class="parallax-bg"></div>
-    </header>
-    <!-- Всё, что ниже hero, скрыто на первой странице -->
-    <main id="main-content">
-        <!-- How it works -->
-        <section class="how-it-works reveal jasper-section" id="how" style="display:none">
-            <div class="container how-works-flex">
-                <div class="how-works-description">
-                    <h2 class="section-title jasper-section-title">Как работает ИИ-агент в закупках</h2>
-                    <p>ИИ-агент закрывает весь цикл тендера — от поиска закупки до подачи заявки и контроля исполнения. Он объединяет пять ключевых этапов в единую автоматизированную цепочку:</p>
-                    <ol class="how-works-list">
-                        <li><b>Поиск</b> — находит и загружает закупки с ЕИС и агрегаторов.</li>
-                        <li><b>Анализ</b> — отбирает подходящие закупки с помощью LLM-фильтрации по шаблонам.</li>
-                        <li><b>Риски</b> — проверяет контрагентов и оценивает тендерные риски.</li>
-                        <li><b>Автозаполнение</b> — автоматически заполняет шаблоны заявок и документов.</li>
-                        <li><b>Контроль</b> — контролирует выполнение обязательств, сроки и акты.</li>
-                    </ol>
-                    <div class="how-works-facts jasper-card" style="margin-top:18px;font-size:1.08rem;">
-                        Всё это — за 4 клика и ЭЦП, в 10 раз быстрее человека, с 90% меньше ошибок.
-                    </div>
-                </div>
-                <img src="how-works.png" alt="Этапы работы ИИ-агента" class="how-works-img" style="max-width:370px;width:100%;margin:32px auto 0 auto;display:block;">
+        <div class="split-right">
+          <p class="body-lg">В крупной компании самые дорогие специалисты неделями делают одно и то же: перечитывают документы, сверяют требования, заполняют формы, следят за сроками. Ошибка стоит денег и репутации, поэтому процесс нельзя просто «ускорить» — его нужно воспроизвести целиком, с логикой и ответственностью.</p>
+          <div class="contrast">
+            <div class="contrast-item">
+              <h3>Классическая автоматизация</h3>
+              <p>RPA и скрипты работают, пока документ выглядит ровно так, как ожидалось. Любое исключение — и процесс встаёт, а человек разбирает завал вручную.</p>
             </div>
-        </section>
-
-        <!-- Benefits Section -->
-        <section class="benefits-section reveal jasper-section" id="benefits" style="display:none">
-            <div class="container">
-                <h2 class="section-title jasper-section-title">Преимущества ИИ-агента</h2>
-                <div class="faq-list jasper-cards">
-                    <div class="jasper-card">
-                        <span class="faq-question">Сокращение трудозатрат</span>
-                        <span class="faq-answer">Автоматизация до 90% операций: от поиска закупок до подачи заявки.</span>
-                    </div>
-                    <div class="jasper-card">
-                        <span class="faq-question">10× быстрее человека</span>
-                        <span class="faq-answer">Полный цикл тендера — за 4 клика и одну ЭЦП, без рутинной работы.</span>
-                    </div>
-                    <div class="jasper-card">
-                        <span class="faq-question">Минимум ошибок и рисков</span>
-                        <span class="faq-answer">Интеллектуальные фильтры, проверка контрагентов, контроль сроков и логики.</span>
-                    </div>
-                    <div class="jasper-card">
-                        <span class="faq-question">Полное соответствие 44-ФЗ и 223-ФЗ</span>
-                        <span class="faq-answer">Юридически корректные действия на каждом этапе, с учётом требований регуляторов.</span>
-                    </div>
-                </div>
+            <div class="contrast-item">
+              <h3>Чат-бот с ИИ</h3>
+              <p>Отвечает на вопрос и на этом останавливается. Между ответом и выполненной задачей остаётся вся работа, ради которой всё затевалось.</p>
             </div>
-        </section>
-
-        <!-- Solutions -->
-        <section class="solutions reveal jasper-section" id="solutions" style="display:none">
-            <div class="container">
-                <h2 class="section-title jasper-section-title">Для кого подходит ИИ-агент</h2>
-                <div class="faq-list jasper-cards">
-                    <div class="jasper-card">
-                        <span class="faq-question">🧾 Специалисты по закупкам</span>
-                        <span class="faq-answer">
-                            Снижайте рутину и повышайте результативность тендеров:<br>
-                            • Автоматический поиск закупок по 44-ФЗ и 223-ФЗ<br>
-                            • Умная фильтрация и подбор релевантных тендеров<br>
-                            • Автозаполнение заявок и шаблонов<br>
-                            • Контроль исполнения, сроков и актов<br>
-                            • Ускорение работы в 10 раз, снижение ошибок на 90%
-                        </span>
-                    </div>
-                    <div class="jasper-card">
-                        <span class="faq-question">⚖️ Юридический отдел</span>
-                        <span class="faq-answer">
-                            Контролируйте соблюдение закона без ручной проверки:<br>
-                            • Полное соответствие 44-ФЗ, 223-ФЗ и ФЗ-152<br>
-                            • Встроенная правовая логика и проверка контрактов<br>
-                            • Локализация данных на территории РФ<br>
-                            • Принцип "человек в центре": ключевые решения — за вами
-                        </span>
-                    </div>
-                    <div class="jasper-card">
-                        <span class="faq-question">🖥️ ИТ-департамент</span>
-                        <span class="faq-answer">
-                            Интеграция без рисков и зависимостей:<br>
-                            • Открытая архитектура и API<br>
-                            • Использование open-source технологий<br>
-                            • Хранение и шифрование данных в соответствии с корпоративными стандартами<br>
-                            • Быстрый запуск и масштабирование
-                        </span>
-                    </div>
-                </div>
-                <div class="solutions-grid jasper-cards">
-                    <div class="solution-card jasper-card">
-                        <span class="icon jasper-icon">🏗️</span>
-                        <div class="sol-title">Строительство</div>
-                        <div class="sol-desc">Подрядчики, строительные компании, проектные бюро</div>
-                    </div>
-                    <div class="solution-card jasper-card">
-                        <span class="icon jasper-icon">🏥</span>
-                        <div class="sol-title">Медицина</div>
-                        <div class="sol-desc">Фармацевтические фирмы, поставщики медоборудования и материалов</div>
-                    </div>
-                    <div class="solution-card jasper-card">
-                        <span class="icon jasper-icon">⛽</span>
-                        <div class="sol-title">Топливная отрасль</div>
-                        <div class="sol-desc">Крупные нефтегазовые компании и региональные поставщики топлива</div>
-                    </div>
-                    <div class="solution-card jasper-card">
-                        <span class="icon jasper-icon">🏢</span>
-                        <div class="sol-title">ЖКХ</div>
-                        <div class="sol-desc">Ресурсоснабжающие предприятия и частные управляющие компании</div>
-                    </div>
-                    <div class="solution-card jasper-card">
-                        <span class="icon jasper-icon">🚚</span>
-                        <div class="sol-title">Транспорт</div>
-                        <div class="sol-desc">Производители и дилеры транспорта, транспортно-логистические компании</div>
-                    </div>
-                </div>
+            <div class="contrast-item accent">
+              <h3>ИИ-агент</h3>
+              <p>Держит цель, а не команду. Сам разбивает задачу на шаги, обращается к системам и документам, справляется с нестандартными случаями и доводит процесс до конкретного результата — заявки, заключения, отчёта.</p>
             </div>
-        </section>
-
-        <!-- Compliance -->
-        <section class="compliance reveal jasper-section" id="compliance" style="display:none">
-            <div class="container">
-                <h2 class="section-title jasper-section-title">Безопасность</h2>
-                <div class="compliance-features jasper-cards">
-                    <div class="compliance-feature jasper-card">
-                        <span class="icon jasper-icon">📜</span>
-                        Соответствие 44-ФЗ и 223-ФЗ
-                    </div>
-                    <div class="compliance-feature jasper-card">
-                        <span class="icon jasper-icon">🔒</span>
-                        Хранение данных в РФ, шифрование
-                    </div>
-                    <div class="compliance-feature jasper-card">
-                        <span class="icon jasper-icon">⚖️</span>
-                        Встроенная юридическая экспертиза и контроль логики
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ -->
-        <section class="security reveal jasper-section" id="faq" style="display:none">
-            <div class="container">
-                <h2 class="section-title jasper-section-title">Часто задаваемые вопросы (FAQ)</h2>
-                <div class="faq-list jasper-cards">
-                    <div class="jasper-card">
-                        <span class="faq-question">Соответствует ли ваш ИИ-агент требованиям российского законодательства о закупках (44 ФЗ, 223 ФЗ) и нормам хранения данных?</span>
-                        <span class="faq-answer">Наше решение изначально разрабатывалось в полном соответствии с российскими законами о закупках – 44 ФЗ и 223 ФЗ, учитывая все процедурные требования этих нормативов. ИИ-агент действует в рамках, разрешенных законодательством, не нарушая установленные правила проведения тендеров и контрактования. Все данные системы хранятся на серверах, находящихся на территории Российской Федерации (в соответствии с требованиями ФЗ-152 о персональных данных), что гарантирует соблюдение требований по локализации и защите информации. Мы отслеживаем изменения в законодательстве РФ и адоптируем наш  продукт для его соблюдения.</span>
-                    </div>
-                    <div class="jasper-card">
-                        <span class="faq-question">Насколько технически надежно и масштабируемо ваше решение? Какие технологии используются в ИИ-агенте?</span>
-                        <span class="faq-answer">Техническая архитектура нашего ИИ-агента основана на современных технологиях с открытым исходным кодом, что обеспечивает прозрачность, надежность и независимость от одного поставщика. Также реализован открытый API для интеграции, благодаря чему платформа легко подключается к другим программным продуктам и может быть расширена под ваши специфические нужды.</span>
-                    </div>
-                    <div class="jasper-card">
-                        <span class="faq-question">Насколько безопасно использование ИИ-агента и как контролируется качество его работы (ошибки и риски)?</span>
-                        <span class="faq-answer">Безопасность данных и надежность работы – наш безусловный приоритет. Мы защищаем информацию на уровне современных корпоративных стандартов, все передаваемые и хранимые данные шифруются, доступ разграничивается по ролям, а инфраструктура размещена на территории РФ. Мы придерживаемся принципа «человек в центре контроля»: ИИ-агент является инструментом помощи, а не заменой эксперта, поэтому ключевые решения всегда остаются за вами. Такой подход гарантирует, что даже в случае ошибки алгоритма она будет вовремя обнаружена и скорректирована, обеспечивая высокое качество и надежность результата.</span>
-                    </div>
-                    <div class="jasper-card">
-                        <span class="faq-question">Какие варианты тарифов вы предлагаете и можно ли протестировать систему на пилотном проекте?</span>
-                        <span class="faq-answer">У нас предусмотрена гибкая система тарифов, чтобы компании разного масштаба смогли подобрать оптимальный вариант под свой бюджет и объем закупочной деятельности. Доступны различные модели – от помесячной подписки для небольших команд до корпоративных лицензий для крупных предприятий, при необходимости мы готовы индивидуально рассчитать стоимость под особенности вашего использования.</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pilot Section -->
-        <section class="pilot-section reveal jasper-section" id="pilot" style="display:none">
-            <div class="container">
-                <h2 class="section-title jasper-section-title">Пилот</h2>
-                <div class="faq-list jasper-cards">
-                    <div class="jasper-card">
-                        <span class="faq-question" style="color:#3558F5; font-size:1.12em;">Тарифы</span>
-                        <span class="faq-answer" style="font-weight:500;">Мы предлагаем гибкие модели подключения — для малого и среднего бизнеса, и компаний с высокой нагрузкой на тендерные процессы. Свяжитесь с нами для более подробной информации.</span>
-                    </div>
-                    <div class="jasper-card">
-                        <span class="faq-question">Что такое пилотный проект?</span>
-                        <span class="faq-answer">Вы можете испытать ИИ-агента в действии на ограниченном участке работы или в течение определенного периода, под наблюдением наших экспертов, перед полноценным развёртыванием.</span>
-                    </div>
-                    <div class="jasper-card">
-                        <span class="faq-question">Что вы получите в ходе пилота?</span>
-                        <span class="faq-answer">Вы оцените эффективность решения на своих процессах, увидите результаты и сможете собрать обратную связь от команды в реальных условиях.</span>
-                    </div>
-                    <div class="jasper-card">
-                        <span class="faq-question">Почему это без риска?</span>
-                        <span class="faq-answer">Пилотный режим и прозрачные условия позволяют убедиться в эффективности без рисков и скрытых обязательств. Мы уверены в ценности продукта и готовы продемонстрировать его пользу на практике.</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Team Section -->
-        <section class="team-section reveal jasper-section" id="team" style="display:none">
-            <div class="container">
-                <h2 class="section-title jasper-section-title">Команда</h2>
-                <div class="team-desc jasper-paragraph">
-                    Мы команда экспертов с глубоким опытом в сфере работы с рисками в закупках, и цифровизации процессов в госсекторе. Проект сопровождается юристами с экспертизой в контрактном праве.
-                </div>
-                <div class="contacts-info jasper-cards team-contacts-flex" style="margin-top:32px; gap:24px; flex-wrap:wrap; justify-content:center;">
-                    <div class="contact-info jasper-card team-contact-card">
-                        <span class="icon jasper-icon">📩</span>
-                        <span><b>Контактный email</b><br>agentai@internet.ru</span>
-                    </div>
-                    <div class="contact-info jasper-card team-contact-card">
-                        <span class="icon jasper-icon">💬</span>
-                        <span><b>Telegram</b><br>@MYGladkih</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta-section reveal jasper-section" id="cta" style="display:none">
-            <div class="container">
-                <h2 class="section-title jasper-section-title">Запросите демо</h2>
-                <form class="cta-form" id="cta-form">
-                    <input type="text" name="name" placeholder="Имя" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="text" name="company" placeholder="Компания" required>
-                    <select name="role" required>
-                        <option value="" disabled selected>Чем вы занимаетесь?</option>
-                        <option value="закупки">Закупки</option>
-                        <option value="ит">ИТ</option>
-                        <option value="комплаенс">Комплаенс</option>
-                        <option value="другое">Другое</option>
-                    </select>
-                    <select name="topic" required>
-                        <option value="" disabled selected>Что хотите обсудить?</option>
-                        <option value="пилот">Пилот</option>
-                        <option value="партнерство">Партнёрство</option>
-                        <option value="интеграция">Интеграцию</option>
-                        <option value="другое">Другое</option>
-                    </select>
-                    <button type="submit" class="jasper-btn big-cta">Отправить заявку</button>
-                </form>
-                <div class="cta-note">Мы свяжемся с вами в течение 1 рабочего дня</div>
-            </div>
-        </section>
-    </main>
-    <footer class="jasper-footer dark-bg" style="display:none">
-        <div class="container">
-            <span>© 2025 ИИ-агент для тендеров</span>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= DIRECTIONS ======================= -->
+  <section class="section" id="directions">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="kicker">Направления</p>
+        <h2 class="h2">Четыре процесса, где агент окупается первым</h2>
+        <p class="section-sub">Мы выбрали направления, в которых у команды есть управленческий опыт изнутри процесса, а не только инженерный. Под каждое есть проработанная архитектура агента.</p>
+      </header>
+
+      <div class="cards-4">
+
+        <article class="card card-lg card-flag">
+          <span class="tag tag-accent">Флагманское направление</span>
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h11l5 5v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/><path d="M14 4v5h5"/><path d="M8 13h7M8 17h5"/></svg>
+          </span>
+          <h3 class="h3">Агент по закупкам<br><span class="muted-h">44-ФЗ и 223-ФЗ</span></h3>
+          <p>Закрывает цикл тендера от поиска закупки до контроля исполнения контракта. Специалист принимает решения, а не собирает данные.</p>
+          <ul class="ticks">
+            <li>Поиск и загрузка закупок из ЕИС и агрегаторов</li>
+            <li>Отбор релевантных лотов по вашим критериям</li>
+            <li>Проверка контрагентов и оценка тендерных рисков</li>
+            <li>Автозаполнение заявок и пакета документов</li>
+            <li>Контроль сроков, обязательств и актов</li>
+          </ul>
+          <a class="card-link" href="#pipeline">Как устроен агент по закупкам
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </article>
+
+        <article class="card card-lg">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+          </span>
+          <h3 class="h3">Агент комплаенса</h3>
+          <p>Снимает с юристов и контролёров сплошную ручную проверку и сводит разрозненные требования к одному понятному заключению.</p>
+          <ul class="ticks">
+            <li>Проверка договоров и документов на соответствие политикам</li>
+            <li>Отслеживание изменений в регуляторике и внутренних нормах</li>
+            <li>Скрининг контрагентов и конфликта интересов</li>
+            <li>Заключение со ссылками на конкретные пункты и источники</li>
+          </ul>
+        </article>
+
+        <article class="card card-lg">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17V9M9 17V5M15 17v-6M21 17v-9"/><path d="M3 21h18"/></svg>
+          </span>
+          <h3 class="h3">Агент маркетинга</h3>
+          <p>Берёт на себя производственный конвейер маркетинга: от исследования и брифа до готовых материалов и разбора результатов кампании.</p>
+          <ul class="ticks">
+            <li>Мониторинг рынка, конкурентов и информационного поля</li>
+            <li>Подготовка материалов в правилах бренда и tone of voice</li>
+            <li>Сборка кампаний под сегменты и каналы</li>
+            <li>Сведение аналитики в выводы, а не в дашборд</li>
+          </ul>
+        </article>
+
+        <article class="card card-lg">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="3"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M12 10v3M12 13l-5 2.5M12 13l5 2.5"/></svg>
+          </span>
+          <h3 class="h3">Агент корпоративного управления</h3>
+          <p>Ведёт документооборот органов управления и не даёт поручениям потеряться между заседаниями.</p>
+          <ul class="ticks">
+            <li>Подготовка материалов к советам директоров и комитетам</li>
+            <li>Протоколы, выписки, повестки по корпоративным стандартам</li>
+            <li>Контроль исполнения поручений и сроков</li>
+            <li>Сбор данных для отчётности из внутренних систем</li>
+          </ul>
+        </article>
+
+      </div>
+
+      <p class="note-line">Процесс не из этого списка? Архитектура агента у нас общая — меняются регламент, источники данных и критерии проверки. <a href="#contact">Расскажите о задаче</a>.</p>
+    </div>
+  </section>
+
+  <!-- ======================= PIPELINE ======================= -->
+  <section class="section section-dark" id="pipeline">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="kicker kicker-light">Как устроен агент</p>
+        <h2 class="h2">Пять этапов вместо ручного цикла тендера</h2>
+        <p class="section-sub">Разбор на примере закупок. Остальные агенты собираются по той же схеме: источники → отбор → проверка → оформление → контроль.</p>
+      </header>
+
+      <ol class="pipeline">
+        <li class="pipe-step">
+          <span class="pipe-num">01</span>
+          <div class="pipe-body">
+            <h3>Поиск</h3>
+            <p>Непрерывно собирает закупки из ЕИС и агрегаторов, забирает документацию и приложения.</p>
+          </div>
+        </li>
+        <li class="pipe-step">
+          <span class="pipe-num">02</span>
+          <div class="pipe-body">
+            <h3>Анализ</h3>
+            <p>Отбирает подходящие лоты: читает документацию целиком и сверяет с вашими критериями и профилем компании.</p>
+          </div>
+        </li>
+        <li class="pipe-step">
+          <span class="pipe-num">03</span>
+          <div class="pipe-body">
+            <h3>Риски</h3>
+            <p>Проверяет заказчика и контрагентов, подсвечивает спорные условия и характерные признаки проблемного тендера.</p>
+          </div>
+        </li>
+        <li class="pipe-step">
+          <span class="pipe-num">04</span>
+          <div class="pipe-body">
+            <h3>Оформление</h3>
+            <p>Заполняет заявку и сопроводительные документы по шаблонам, собирает комплект и показывает его на проверку человеку.</p>
+          </div>
+        </li>
+        <li class="pipe-step">
+          <span class="pipe-num">05</span>
+          <div class="pipe-body">
+            <h3>Контроль</h3>
+            <p>Ведёт обязательства по выигранным контрактам: сроки, этапы, акты — и предупреждает заранее, а не постфактум.</p>
+          </div>
+        </li>
+      </ol>
+
+      <p class="pipeline-note">На каждом шаге агент оставляет след: какие документы прочитал, на каком основании принял решение, что предлагает сделать. Это то, что отличает рабочий инструмент от чёрного ящика, которому в корпорации никто не доверит процесс.</p>
+    </div>
+  </section>
+
+  <!-- ======================= PROCESS ======================= -->
+  <section class="section" id="process">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="kicker">Как мы работаем</p>
+        <h2 class="h2">От разговора о процессе до агента в работе</h2>
+        <p class="section-sub">Мы не продаём коробку и не начинаем с большого контракта. Сначала доказываем эффект на узком участке — дальше вы решаете, масштабировать или нет.</p>
+      </header>
+
+      <div class="steps">
+        <article class="step">
+          <span class="step-idx">Этап 1</span>
+          <h3 class="h3">Диагностика процесса</h3>
+          <p class="step-time">1–2 недели</p>
+          <p>Разбираем процесс вместе с вашими людьми: где уходит время, где возникают ошибки, что нельзя отдавать машине. На выходе — карта процесса и честная оценка, где агент даст эффект, а где не даст.</p>
+        </article>
+        <article class="step">
+          <span class="step-idx">Этап 2</span>
+          <h3 class="h3">Прототип</h3>
+          <p class="step-time">2–4 недели</p>
+          <p>Собираем работающего агента на одном узком участке и на ваших реальных данных. Не слайды — то, что можно запустить и посмотреть, как оно справляется.</p>
+        </article>
+        <article class="step">
+          <span class="step-idx">Этап 3</span>
+          <h3 class="h3">Пилот в вашем контуре</h3>
+          <p class="step-time">4–8 недель</p>
+          <p>Разворачиваем в вашей инфраструктуре, подключаем к системам, договариваемся о метриках заранее. Команда работает рядом с агентом и даёт обратную связь, мы дорабатываем на ходу.</p>
+        </article>
+        <article class="step">
+          <span class="step-idx">Этап 4</span>
+          <h3 class="h3">Внедрение и сопровождение</h3>
+          <p class="step-time">дальше</p>
+          <p>Масштабируем на смежные участки, настраиваем мониторинг и регламент эксплуатации, передаём знания вашей команде. Исходники и документация остаются у вас.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= TECH ======================= -->
+  <section class="section section-soft" id="tech">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="kicker">Технологии и безопасность</p>
+        <h2 class="h2">Требования службы безопасности — часть архитектуры, а не приложение к договору</h2>
+      </header>
+
+      <div class="cards-3">
+        <article class="card">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg></span>
+          <h3 class="h3">Развёртывание в вашем периметре</h3>
+          <p>On-premise или частное облако. Данные и документы не уходят наружу, инфраструктура на территории РФ.</p>
+        </article>
+        <article class="card">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13.5 6l-3 12"/></svg></span>
+          <h3 class="h3">Открытый стек</h3>
+          <p>Open-source компоненты и открытый API. Модель выбирается под задачу и ваши ограничения — включая полностью локальные. Без замка на одного поставщика.</p>
+        </article>
+        <article class="card">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><path d="M12 14v2"/></svg></span>
+          <h3 class="h3">Защита данных и 152-ФЗ</h3>
+          <p>Шифрование при передаче и хранении, ролевая модель доступа, изоляция данных заказчика. Работа с персональными данными — по требованиям 152-ФЗ.</p>
+        </article>
+        <article class="card">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="4"/></svg></span>
+          <h3 class="h3">Человек в контуре решения</h3>
+          <p>Юридически значимые действия агент не совершает сам. Он готовит решение и обоснование — подтверждает человек. Точки контроля настраиваются под ваш регламент.</p>
+        </article>
+        <article class="card">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16M4 12h16M4 19h10"/><circle cx="19" cy="19" r="2.5"/></svg></span>
+          <h3 class="h3">Полный аудит действий</h3>
+          <p>Каждый шаг агента журналируется: какие источники использованы, что и почему предложено. Решение всегда можно разобрать постфактум.</p>
+        </article>
+        <article class="card">
+          <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v6c0 4.5-3.2 8.2-8 9-4.8-.8-8-4.5-8-9V7l8-4z"/><path d="M12 8v4M12 15h.01"/></svg></span>
+          <h3 class="h3">Правовая рамка процесса</h3>
+          <p>Логика агента строится по действующим нормам отрасли — для закупок это 44-ФЗ и 223-ФЗ. Изменения регуляторики отслеживаем и переносим в правила агента.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= TEAM ======================= -->
+  <section class="section" id="team">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="kicker">Команда</p>
+        <h2 class="h2">Управленцы, которые знают процесс изнутри, и инженеры, которые умеют его собрать</h2>
+        <p class="section-sub">Большинство проектов с ИИ разбиваются об одно: разработчики не знают процесс, а те, кто знает процесс, не могут его формализовать. Мы закрываем обе стороны внутри команды.</p>
+      </header>
+
+      <div class="cards-3 cards-3-team">
+        <article class="card card-outline">
+          <span class="card-num" aria-hidden="true">01</span>
+          <h3 class="h3">Управленческая экспертиза</h3>
+          <p>Опыт руководства процессами в закупках и работе с рисками. Мы разбираем регламент так, как его разбирает человек, который за него отвечал, — включая исключения, которых нет ни в одной инструкции.</p>
+        </article>
+        <article class="card card-outline">
+          <span class="card-num" aria-hidden="true">02</span>
+          <h3 class="h3">Инженерия ИИ-агентов</h3>
+          <p>Проектирование агентных систем: работа с документами, интеграции с корпоративными системами, оценка качества, контроль стоимости и предсказуемости работы модели.</p>
+        </article>
+        <article class="card card-outline">
+          <span class="card-num" aria-hidden="true">03</span>
+          <h3 class="h3">Юридическое сопровождение</h3>
+          <p>Проект сопровождают юристы с экспертизой в контрактном праве и закупочном законодательстве. Правовая логика попадает в агента на этапе проектирования, а не проверяется потом.</p>
+        </article>
+      </div>
+
+      <div class="honest">
+        <h3>Мы стартап — и говорим об этом прямо</h3>
+        <p>У нас нет стены логотипов и десяти лет истории. Есть команда с реальным опытом в процессах, проработанная архитектура агентов и готовность доказать пользу на вашем участке работы за несколько недель. Поэтому мы берём ограниченное число проектов и ведём каждый лично — с теми же людьми, с которыми вы разговариваете сейчас.</p>
+        <a href="#contact" class="btn btn-primary">Познакомиться и обсудить процесс</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FAQ ======================= -->
+  <section class="section section-soft" id="faq">
+    <div class="wrap wrap-narrow">
+      <header class="section-head">
+        <p class="kicker">Вопросы</p>
+        <h2 class="h2">Что обычно спрашивают до первой встречи</h2>
+      </header>
+
+      <div class="faq">
+        <details>
+          <summary>С чего начинается работа и сколько это стоит?</summary>
+          <div class="faq-a"><p>Начинается с разговора о процессе — бесплатно и без обязательств. Дальше первый оплачиваемый шаг — диагностика: 1–2 недели, по итогам вы получаете карту процесса и оценку эффекта, даже если решите не продолжать. Стоимость проекта зависит от сложности регламента, числа интеграций и режима развёртывания, поэтому мы считаем её после диагностики, а не по прайсу.</p></div>
+        </details>
+        <details>
+          <summary>Данные не уйдут за пределы компании?</summary>
+          <div class="faq-a"><p>Базовый сценарий — развёртывание в вашем контуре: on-premise или частное облако на инфраструктуре в РФ. В этом варианте документы и персональные данные не покидают периметр. Если вы допускаете внешние модели, мы отдельно фиксируем, какие данные и в каком объёме к ним попадают, — это обсуждается с вашей службой безопасности до старта.</p></div>
+        </details>
+        <details>
+          <summary>Кто отвечает, если агент ошибётся?</summary>
+          <div class="faq-a"><p>Агент не совершает юридически значимых действий самостоятельно. Он готовит результат и обоснование, а подтверждает человек — точки контроля мы расставляем по вашему регламенту. Плюс все действия журналируются, поэтому любое решение можно разобрать и понять, на каких данных оно построено. Ответственность остаётся в вашей рамке принятия решений, а не переносится на алгоритм.</p></div>
+        </details>
+        <details>
+          <summary>Чем это отличается от готовых сервисов на рынке?</summary>
+          <div class="faq-a"><p>Готовый сервис реализует усреднённый процесс и требует, чтобы вы под него подстроились. Мы делаем обратное: агент собирается под ваш регламент, ваши критерии и ваши системы. И вы не привязаны к нам инфраструктурно — стек открытый, API открытый, наработки и документация остаются у вас.</p></div>
+        </details>
+        <details>
+          <summary>Нужно ли перестраивать наши системы?</summary>
+          <div class="faq-a"><p>Нет. Агент подключается к тому, что уже работает, — через API, выгрузки или интеграционный слой. Если часть процесса живёт в почте и файлах, это тоже рабочий вход: чтение документов — как раз то, что агент делает лучше всего.</p></div>
+        </details>
+        <details>
+          <summary>Сколько времени займёт наша команда?</summary>
+          <div class="faq-a"><p>На диагностике — несколько встреч с людьми, которые ведут процесс. Дальше нужен один человек с вашей стороны, который может ответить на вопросы по регламенту и посмотреть результаты работы агента. На пилоте вовлечение растёт: обратная связь от команды — то, что делает агента точным.</p></div>
+        </details>
+        <details>
+          <summary>Работаете только с закупками?</summary>
+          <div class="faq-a"><p>Нет. Закупки — направление, где у нас глубже всего отраслевая экспертиза, поэтому мы про них рассказываем подробнее. Архитектура агента одинакова для регламентных процессов с документами и сроками: комплаенс, корпоративное управление, маркетинг и смежные задачи.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= CTA ======================= -->
+  <section class="section section-cta" id="contact">
+    <div class="wrap">
+      <div class="cta-box">
+        <div class="cta-copy">
+          <p class="kicker kicker-light">Контакт</p>
+          <h2 class="h2">Расскажите о процессе — мы скажем, есть ли там задача для агента</h2>
+          <p class="cta-sub">Первый разговор — 30–40 минут, без презентаций и обязательств. Если увидим, что агент здесь не даст эффекта, скажем прямо.</p>
+          <ul class="cta-list">
+            <li>Отвечаем в течение одного рабочего дня</li>
+            <li>Готовы подписать NDA до обсуждения деталей</li>
+            <li>Разговариваем с вашими процессными людьми, а не только с ИТ</li>
+          </ul>
+          <div class="cta-direct">
+            <a href="https://t.me/MYGladikh" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19c-.2 1-.9 1.3-1.7.8l-4.7-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.8 8.8-8c.4-.3-.1-.5-.6-.2L6.7 13.1l-4.7-1.5c-1-.3-1-1 .2-1.5l18.4-7.1c.9-.3 1.6.2 1.3 1.3z"/></svg>
+              @MYGladikh
+            </a>
+            <a href="mailto:gladdd@list.ru">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              gladdd@list.ru
+            </a>
+          </div>
+        </div>
+
+        <div class="cta-form-wrap">
+          <form class="form" id="lead-form" action="https://formspree.io/f/maewajgg" method="POST" novalidate>
+            <div class="field">
+              <label for="f-name">Имя</label>
+              <input type="text" id="f-name" name="name" autocomplete="name" required placeholder="Как к вам обращаться">
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-company">Компания</label>
+                <input type="text" id="f-company" name="company" autocomplete="organization" required placeholder="Название">
+              </div>
+              <div class="field">
+                <label for="f-contact">Email или Telegram</label>
+                <input type="text" id="f-contact" name="contact" required placeholder="Куда ответить">
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-area">Направление</label>
+              <select id="f-area" name="area" required>
+                <option value="" disabled selected>Выберите</option>
+                <option>Закупки (44-ФЗ / 223-ФЗ)</option>
+                <option>Комплаенс</option>
+                <option>Маркетинг</option>
+                <option>Корпоративное управление</option>
+                <option>Другой процесс</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-task">Коротко о задаче</label>
+              <textarea id="f-task" name="task" rows="3" placeholder="Какой процесс хотите разгрузить и что в нём болит"></textarea>
+            </div>
+            <label class="checkbox">
+              <input type="checkbox" id="f-consent" name="consent" required>
+              <span>Согласен на обработку персональных данных для ответа на обращение</span>
+            </label>
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
+            <!-- Работают, если JavaScript не загрузился и форма ушла обычным POST -->
+            <input type="hidden" name="_subject" value="Заявка с сайта агентии.рф">
+            <input type="hidden" name="_next" value="https://xn--80aggma2a9a.xn--p1ai/#contact">
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit-btn">Отправить заявку</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-text">Агент<span class="brand-accent">ИИ</span></span>
+      <p>Команда разработки ИИ-агентов для корпоративных процессов.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Разделы сайта">
+      <a href="#directions">Направления</a>
+      <a href="#process">Как мы работаем</a>
+      <a href="#tech">Технологии</a>
+      <a href="#team">Команда</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <div class="footer-contacts">
+      <a href="mailto:gladdd@list.ru">gladdd@list.ru</a>
+      <a href="https://t.me/MYGladikh" target="_blank" rel="noopener">Telegram @MYGladikh</a>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© <span id="year">2026</span> АгентИИ</span>
+    <span>агентии.рф</span>
+  </div>
+</footer>
+
 </body>
 </html>
